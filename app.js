@@ -1,5 +1,5 @@
-const host = '0.0.0.0';
-const port = process.env.port || 2000;
+const HOST = '0.0.0.0';
+const PORT = process.env.PORT || 2000;
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -48,6 +48,6 @@ app.post('/index/send', function (req, res){
      console.log('sent');
 });
 
-app.listen(port, host, function(){
-    console.log("server has started...");
+app.listen(PORT, function(){
+    console.log(`Our app is running on port ${ PORT }`);
 });
